@@ -1,30 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import Title from './title';
-import Add from './add';
-import Item from './item';
+import Title from './Title';
+import Items from './Items';
+
 
 function App() {
 
-  const [refetch, setRefetch] = useState(false)
-
-  const handleAddPost = () => {
-    // Force re-render App component
-    window.location.reload();
-  };
+  const refetch = false
 
   return (
     <div className='container'>
       <Title />
-      <div className='add'>
-        <Add
-          handleAddPost={handleAddPost}
-          refetch={refetch}
-          setRefetch={setRefetch}
-        />
-      </div>
       <div className='item'>
-        <Item refetch={refetch} />
+        <Items refetch={refetch} />
       </div>
     </div>
   );
