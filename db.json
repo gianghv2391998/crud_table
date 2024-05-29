@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "company": "Alfreds Futterkistea",
+      "contact": "Maria Anders",
+      "country": "Germany",
+      "image": "https://th.bing.com/th/id/R.63bff5fafb6d85e487c1c64621296ca9?rik=O785%2fbam8eSxjw&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "2",
+      "company": "Centro comercial Moctezuma",
+      "contact": "Francisco Chang",
+      "country": "Mexico",
+      "image": "https://th.bing.com/th/id/R.0737629c397c86c1bb392066a06ba31a?rik=KGu3D5DE%2fWhhjw&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f1%2f17%2fFlag_of_Mexico.png&ehk=MAXespfiLeO3ZBPldQ3%2fNDkCjzGo7hljFBd3yKgqLTY%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "3",
+      "company": "Ernst Handel",
+      "contact": "Roland Mendel",
+      "country": "Austria",
+      "image": "https://flagpedia.net/data/flags/ultra/at.png"
+    },
+    {
+      "id": "4",
+      "company": "Island Trading",
+      "contact": "Helen Bennett",
+      "country": "UK",
+      "image": "https://th.bing.com/th/id/R.4538343121bbbdb4567f4f84939d7cf7?rik=tXYzzosmKWjTsw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-MpEVFMYWmoU%2fUPJ_zq9m_jI%2fAAAAAAAAFR8%2fEbVMdTciKlo%2fs1600%2fFlag_great_britain%2bhd%2bwallpapers.png&ehk=DXo8k4GW5AE7YFGJMEvhNKMKPb7k%2bF2eAXDgGVJttBQ%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+      "id": "5",
+      "company": "Magazzini Alimentari Riuniti",
+      "contact": "Giovanni Rovelli",
+      "country": "Italy",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png"
+    },
+    {
+      "id": "6",
+      "company": "a",
+      "contact": "a",
+      "country": "a",
+      "image": "C:\\fakepath\\OIP.jpg"
+    }
+  ]
+}
