@@ -30,10 +30,17 @@
     },
     {
       "id": "5",
-      "company": "Magazzini Alimentari Riuniti",
-      "contact": "Giovanni Rovelli",
-      "country": "Italy",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png"
+      "company": "d",
+      "contact": "d",
+      "country": "d",
+      "image": "https://i.pinimg.com/originals/71/88/a2/7188a275c51689f47f4c5bc4de7739f9.jpg"
+    },
+    {
+      "id": "6",
+      "company": "d",
+      "contact": "d",
+      "country": "d",
+      "image": "https://i.pinimg.com/originals/71/88/a2/7188a275c51689f47f4c5bc4de7739f9.jpg"
     }
   ]
 }

@@ -59,7 +59,27 @@ h2 {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 600px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.addButton {
+  margin-left: 95%;
+}
+
+
+
+.header-container {
+  border: 2px solid #000;
+  /* Đặt màu sắc và độ dày của khung */
+  border-radius: 8px;
+  /* Đặt góc bo tròn của khung */
+  padding: 20px;
+  /* Đặt khoảng cách bên trong của khung */
+
+  /* Đặt khoảng cách bên ngoài của khung và canh giữa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đặt đổ bóng cho khung */
+
 }

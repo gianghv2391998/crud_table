@@ -1,22 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Title from './Title';
 import Items from './Items';
-
+import Detail from './Detail';
 
 function App() {
-
-  const refetch = false
+  const refetch = false;
 
   return (
-    <div className='container'>
-      <Title />
-      <div className='item'>
-        <Items refetch={refetch} />
+    <Router>
+      <div className="container">
+        <div className="item">
+          <Routes>
+            <Route path="/" element={<Items refetch={refetch} />} />
+            <Route path="/detail/:id" element={<Detail />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
-
 
 export default App;
