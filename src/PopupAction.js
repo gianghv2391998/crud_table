@@ -86,6 +86,7 @@ function PopupAction({ titleAction, showPopup, handleClosePopup, product, setPro
                             value={editingProduct?.image || ''}
                             onChange={(e) => setEditingProduct({ ...editingProduct, image: e.target.value })}
                         />
+
                         <br /><br />
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Button variant="contained" onClick={handlePreview} style={{ marginRight: '10px' }}>Preview</Button>
