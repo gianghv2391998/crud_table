@@ -7,7 +7,21 @@ import Typography from '@mui/material/Typography';
 
 function PopupAction({ titleAction, showPopup, handleClosePopup, product, setProducts, setRefetch }) {
     const [editingProduct, setEditingProduct] = useState(product);
-    const [checkPreview, setCheckPreview] = useState(false);
+    // const [checkPreview, setCheckPreview] = useState(false);
+    const [url, setUrl] = useState('');
+    const uploader = (file) => {
+        const reader = new FileReader();
+        reader.addEventListener('load', () => {
+            localStorage.setItem('recent-image', reader.result)
+        })
+
+        reader.readAsDataURL(file);
+        
+    }
+    useEffect(() => {
+        setUrl(localStorage.getItem('recent-image'));
+        console.log(localStorage.getItem('recent-image'));
+    }, [])
 
     useEffect(() => {
         setEditingProduct(product);
@@ -30,9 +44,9 @@ function PopupAction({ titleAction, showPopup, handleClosePopup, product, setPro
         handleClosePopup();
     };
 
-    const handlePreview = () => {
-        setCheckPreview(true);
-    };
+    // const handlePreview = () => {
+    //     setCheckPreview(true);
+    // };
 
     return (
         <div>
@@ -76,7 +90,7 @@ function PopupAction({ titleAction, showPopup, handleClosePopup, product, setPro
                             onChange={(e) => setEditingProduct({ ...editingProduct, price: e.target.value })}
                         />
                         <br /><br />
-                        <TextField
+                        {/* <TextField
                             id="outlined-image-url"
                             label="Image URL"
                             type="text"
@@ -85,15 +99,18 @@ function PopupAction({ titleAction, showPopup, handleClosePopup, product, setPro
                             }}
                             value={editingProduct?.image || ''}
                             onChange={(e) => setEditingProduct({ ...editingProduct, image: e.target.value })}
-                        />
+                        /> */}
 
-                        <br /><br />
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <UploadForm uploader={uploader} />
+                        <img src={url} alt="....." height={100} width={100} />
+
+                        {/* <br /><br /> */}
+                        {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                             <Button variant="contained" onClick={handlePreview} style={{ marginRight: '10px' }}>Preview</Button>
                             {checkPreview && editingProduct?.image && (
                                 <img src={editingProduct.image} alt="Preview" width="100" />
                             )}
-                        </div>
+                        </div> */}
                         <br /><br />
                         <Button variant="contained" onClick={handleSave} style={{ marginRight: '10%' }}>Save</Button>
                         <Button variant="contained" onClick={handleClosePopup}>Cancel</Button>
@@ -102,6 +119,15 @@ function PopupAction({ titleAction, showPopup, handleClosePopup, product, setPro
             )}
         </div>
     );
+}
+
+const UploadForm = ({ uploader }) => {
+    const handleChange = (e) => {
+        uploader(e.target.files[0])
+    }
+    return <form>
+        <input type="file" accept="image/*" onChange={handleChange} />
+    </form>;
 }
 
 export default PopupAction;
