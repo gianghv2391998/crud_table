@@ -11,7 +11,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
-import Title from './title';
+// import Title from './title';
+import Title from '../Auth/Title';
 
 function Products() {
     const [products, setProducts] = useState([]);
@@ -19,6 +20,7 @@ function Products() {
     const [showPopup, setShowPopup] = useState(false);
     const [titleAction, setTitleAction] = useState("");
     const [refetch, setRefetch] = useState(false); // State for triggering data refetch
+
 
     useEffect(() => {
         getProducts();
@@ -59,7 +61,7 @@ function Products() {
     };
 
     return (
-        <div>
+        <div className='wrap' style={{ width: '82vw', marginTop: '500px'}}>
             <Title />
             <div className="addButton">
                 <Button variant="contained" onClick={handleAddProduct}>Add</Button>
@@ -107,6 +109,7 @@ function Products() {
                     titleAction={titleAction}
                     handleClosePopup={handleClosePopup}
                     setRefetch={setRefetch} // Pass setRefetch function to update refetch state
+                    getProducts={getProducts}
                 />
             )}
         </div>
