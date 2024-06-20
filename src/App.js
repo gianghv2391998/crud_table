@@ -1,23 +1,37 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Items from './Items';
-import Detail from './Detail';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { ThemeProvider } from "./ThemeProvider";
+import { publicRoutes } from "./routes";
 
 function App() {
-  const refetch = false;
-
   return (
-    <Router>
-      <div className="container">
-        <div className="item">
-          <Routes>
-            <Route path="/" element={<Items refetch={refetch} />} />
-            <Route path="/detail/:id" element={<Detail />} />
-          </Routes>
-        </div>
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Navigate to="/product" />} />
+          {publicRoutes.map((route, id) => {
+            const Layout = route.layout;
+            const Page = route.component;
+            return (
+              <Route
+                key={id}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              ></Route>
+            );
+          })}
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

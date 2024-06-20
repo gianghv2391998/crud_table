@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 function Header({ name, onEdit, onDelete, onBack }) {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-            <h2>{name}</h2>
-            <div style={{ marginRight: '70%' }}>
+            <h2>Details of the {name}</h2>
+            <div style={{ marginRight: '50%' }}>
                 <Button variant="contained" onClick={onEdit} style={{ marginRight: '10px' }}>Edit</Button>
                 <Button variant="contained" onClick={onDelete} style={{ marginLeft: '10px' }}>Delete</Button>
             </div>
