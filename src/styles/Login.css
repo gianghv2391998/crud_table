@@ -1,69 +1,73 @@
 /* Đặt các thuộc tính chung cho toàn bộ trang */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
 /* Định kiểu cho container chính của form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
 .mainContainer {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
 /* Định kiểu cho tiêu đề của form */
 .titleContainer {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* Định kiểu cho container của input */
 .inputContainer {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 /* Định kiểu cho input box */
 .inputBox {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 /* Định kiểu cho nút đăng nhập */
 .inputButton {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /* Định kiểu cho nút đăng nhập khi hover */
 .inputButton:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Định kiểu cho nhãn lỗi */
 .errorLabel {
-    color: red;
-    font-size: 14px;
-    height: 14px;
-    margin-top: 5px;
+  color: red;
+  font-size: 14px;
+  height: 14px;
+  margin-top: 5px;
 }

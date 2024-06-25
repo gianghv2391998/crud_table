@@ -55,37 +55,39 @@ function Login() {
     };
 
     return (
-        <div className="mainContainer">
-            <div className="titleContainer">
-                <div>Login</div>
+        <div className="login-container">
+            <div className="mainContainer">
+                <div className="titleContainer">
+                    <div>Login</div>
+                </div>
+                <br />
+                <div className="inputContainer">
+                    <input
+                        value={email}
+                        placeholder="Enter your email here"
+                        onChange={(ev) => setEmail(ev.target.value)}
+                        className="inputBox"
+                    />
+                    <label className="errorLabel">{error}</label>
+                </div>
+                <br />
+                <div className="inputContainer">
+                    <input
+                        type="password"
+                        value={password}
+                        placeholder="Enter your password here"
+                        onChange={(ev) => setPassword(ev.target.value)}
+                        className="inputBox"
+                    />
+                    <label className="errorLabel">{ }</label>
+                </div>
+                <br />
+                <div className="inputContainer">
+                    <input className="inputButton" type="button" value="Log in" onClick={handleLogin} />
+                </div>
+                <h6>You don't have an account yet</h6>
+                <button onClick={handleRegisterClick} style={{ marginRight: '10px'}}>Register</button>
             </div>
-            <br />
-            <div className="inputContainer">
-                <input
-                    value={email}
-                    placeholder="Enter your email here"
-                    onChange={(ev) => setEmail(ev.target.value)}
-                    className="inputBox"
-                />
-                <label className="errorLabel">{error}</label>
-            </div>
-            <br />
-            <div className="inputContainer">
-                <input
-                    type="password"
-                    value={password}
-                    placeholder="Enter your password here"
-                    onChange={(ev) => setPassword(ev.target.value)}
-                    className="inputBox"
-                />
-                <label className="errorLabel">{ }</label>
-            </div>
-            <br />
-            <div className="inputContainer">
-                <input className="inputButton" type="button" value="Log in" onClick={handleLogin} />
-            </div>
-            <h6>You don't have an account yet</h6>
-            <button onClick={handleRegisterClick} style={{ marginRight: '10px'}}>Register</button>
         </div>
     );
 }

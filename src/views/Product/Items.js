@@ -11,7 +11,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
-// import Title from './title';
 import Title from '../Auth/Title';
 
 function Products() {

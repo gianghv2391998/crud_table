@@ -1,9 +1,12 @@
+import React from 'react';
+import '../styles/AuthLayout.css'
+
 export const AuthLayout = ({ children }) => {
   return (
-    <>
-      <p style={{ backgroundImage: `url('https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-nen-may-tinh-dep-a-19-1.jpg')` }}>
+    <div className="auth-background">
+      <div className="auth-content">
         {children}
-      </p>
-    </>
+      </div>
+    </div>
   );
 };
